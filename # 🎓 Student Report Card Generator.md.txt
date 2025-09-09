@@ -1,0 +1,15 @@
+# 🎓 Student Report Card Generator
+
+A simple web app that generates positive, encouraging student report cards for ESL learners.
+
+## ✨ Features
+- Generates unique reports with randomized positive + improvement comments
+- Clean, responsive design
+- Gender-based pronouns for personalized feedback
+
+## 🚀 How to Use
+1. Enter the student's details in the form
+2. Click **Generate Report**
+3. Copy or print the output
+
+## 📂 Project Structure
