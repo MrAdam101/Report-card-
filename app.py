@@ -99,11 +99,21 @@ opening_lines = [
 ]
 
 strength_lines = [
-    f"In English lessons, {student_name} has shown strength in listening carefully and following instructions with increasing independence. {p['subj']} is able to understand key vocabulary and responds well during whole-class activities. {p['subj']} is also developing a stronger understanding of familiar words and phrases, which is helping {p['obj']} take part more confidently in class.",
-    
-    f"{p['subj']} has shown a growing ability to understand classroom English and use learned vocabulary during activities. {student_name} is making good progress in recognising words, responding to questions, and joining in with guided speaking tasks. {p['subj']} also shows good effort when practising new language and is developing a stronger foundation in English.",
-    
-    f"One of {student_name}'s strengths this term has been {p['poss']} steady effort in English class. {p['subj']} listens well, follows examples carefully, and is becoming more confident when using familiar vocabulary. {p['subj']} has also shown encouraging progress when working through structured classroom tasks and teacher-led activities."
+    f"{p['subj']} listens carefully during lessons and follows instructions well.",
+    f"{p['subj']} shows a good understanding of classroom English and responds appropriately to tasks.",
+    f"{p['subj']} participates well in activities and is becoming more confident when using English.",
+    f"{p['subj']} is developing a strong understanding of key vocabulary used in class.",
+    f"{p['subj']} works hard during lessons and shows a positive effort in learning English.",
+    f"{p['subj']} is making steady progress in understanding and using basic English expressions.",
+    f"{p['subj']} shows good focus during class and is able to follow along with lesson activities.",
+    f"{p['subj']} is becoming more confident when responding to simple questions in English.",
+    f"{p['subj']} demonstrates a growing ability to understand spoken English during class time.",
+    f"{p['subj']} is developing well in recognising and using familiar English words.",
+    f"{p['subj']} shows a positive approach to learning new vocabulary and classroom language.",
+    f"{p['subj']} is building confidence in English and is beginning to use language more independently.",
+    f"{p['subj']} works well during guided activities and is improving in English step by step.",
+    f"{p['subj']} is showing encouraging progress in understanding instructions and classroom tasks.",
+    f"{p['subj']} is developing stronger English skills through consistent effort in class."
 ]
 
 participation_lines = [
