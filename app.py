@@ -81,11 +81,21 @@ else:
 
 # ---------- SENTENCE BANKS ----------
 opening_lines = [
-    f"{student_name} has had a very positive term in English and has shown a cheerful attitude toward classroom learning. {p['subj']} comes to class ready to participate and has continued to settle well into daily routines. Throughout the term, {p['subj'].lower()} has shown that {p['subj'].lower()} is willing to try new activities and respond positively to teacher guidance.",
-    
-    f"It has been a pleasure teaching {student_name} this term. {p['subj']} has approached English lessons with a positive mindset and has shown encouraging growth over time. {student_name} is developing as a learner who is becoming more comfortable with classroom tasks, and {p['subj'].lower()} often shows a genuine willingness to do {p['poss']} best.",
-    
-    f"{student_name} is a bright and hardworking student who has made pleasing progress in English this term. {p['subj']} shows a positive attitude during lessons and is continuing to build confidence in a steady and encouraging way. {p['subj']} has responded well to classroom routines and has shown a strong effort to take part in class activities."
+    f"{student_name} has had a very positive term in English and has shown a cheerful attitude toward learning.",
+    f"It has been a pleasure teaching {student_name} this term in English.",
+    f"{student_name} is a motivated student who continues to make steady progress in English lessons.",
+    f"Throughout the term, {student_name} has shown a positive approach to English class.",
+    f"{student_name} has worked hard in English this term and should feel proud of this progress.",
+    f"{student_name} is a bright and enthusiastic student who enjoys participating in English activities.",
+    f"{student_name} has shown a consistent effort in English and continues to develop important language skills.",
+    f"In English class, {student_name} has demonstrated a positive attitude and a willingness to learn.",
+    f"{student_name} has made encouraging progress in English and approaches lessons with a good mindset.",
+    f"{student_name} is developing well in English and continues to grow in confidence each week.",
+    f"{student_name} has shown great effort during English lessons and is building a strong foundation.",
+    f"{student_name} continues to approach English learning with energy and a positive attitude.",
+    f"{student_name} has shown pleasing progress in English and is becoming more confident in class.",
+    f"{student_name} is a hardworking student who is steadily improving in English lessons.",
+    f"{student_name} has had a successful term in English and continues to show a strong effort in class."
 ]
 
 strength_lines = [
