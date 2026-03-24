@@ -133,14 +133,13 @@ if st.button("✨ Generate Report Card"):
     if not student_name.strip():
         st.warning("Please enter the student's name.")
     else:
-        report = " ".join([
-            random.choice(opening_lines),
-            random.choice(strength_lines),
-            random.choice(participation_lines),
-            random.choice(social_lines),
-            random.choice(improvement_lines),
-            random.choice(closing_lines)
-        ])
+    report = " ".join([
+    random.choice(opening_lines),
+    random.choice(strength_lines),
+    random.choice(social_lines),
+    random.choice(improvement_lines),
+    random.choice(closing_lines)
+])
 
         word_count = len(report.split())
 
