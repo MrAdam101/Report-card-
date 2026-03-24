@@ -142,6 +142,8 @@ if st.button("✨ Generate Report Card"):
 
         st.subheader("Generated Report")
         st.markdown(f'<div class="report-box">{report}</div>', unsafe_allow_html=True)
+        word_count = len(report.split())
+        st.write(f"Word count: {word_count}")
 
         st.download_button(
             "📥 Download Report",
