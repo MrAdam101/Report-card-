@@ -46,7 +46,7 @@ st.markdown('<div class="main-title">📘 Report Card App</div>', unsafe_allow_h
 st.markdown('<div class="sub-title">Create positive, ESL-focused student reports in one click</div>', unsafe_allow_html=True)
 
 # ---------- INPUTS ----------
-st.subheader("Student Details")
+st.subheader("Report card generator")
 
 student_name = st.text_input("Student Name")
 class_name = st.text_input("Class")
