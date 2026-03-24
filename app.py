@@ -117,11 +117,21 @@ strength_lines = [
 ]
 
 participation_lines = [
-    f"During class, {student_name} usually participates well and shows a positive willingness to join in learning activities. {p['subj']} responds well during speaking practice, vocabulary review, and simple question-and-answer tasks. Even when {p['subj'].lower()} feels unsure, {p['subj'].lower()} still tries to take part, which is very pleasing to see.",
-    
-    f"{student_name} has made encouraging progress in classroom participation. {p['subj']} is becoming more willing to answer questions, repeat target language, and engage in activities with teacher support. {p['subj']} often tries hard during lessons and shows that {p['subj'].lower()} wants to improve.",
-    
-    f"{p['subj']} takes part well in class activities and usually shows a cooperative attitude toward learning. {student_name} is especially developing confidence during guided practice and small classroom tasks. {p['subj']} is learning to take a more active role in lessons, which is helping {p['obj']} continue to grow."
+    f"{p['subj']} participates actively during lessons and shows a willingness to try new activities.",
+    f"{p['subj']} is becoming more confident when taking part in class activities.",
+    f"{p['subj']} shows a positive attitude toward participation and is willing to join in.",
+    f"{p['subj']} responds well during class and makes a good effort to take part in activities.",
+    f"{p['subj']} is developing confidence when participating in English tasks and group work.",
+    f"{p['subj']} takes part in lessons with encouragement and is building confidence over time.",
+    f"{p['subj']} is learning to participate more independently during classroom activities.",
+    f"{p['subj']} shows a growing willingness to answer questions and join class discussions.",
+    f"{p['subj']} is making progress in participating during speaking and listening activities.",
+    f"{p['subj']} engages well in classroom tasks and shows interest in learning English.",
+    f"{p['subj']} participates with support and is gradually becoming more confident.",
+    f"{p['subj']} shows a cooperative attitude when taking part in classroom activities.",
+    f"{p['subj']} is beginning to take a more active role during lessons.",
+    f"{p['subj']} responds positively during activities and shows a willingness to try.",
+    f"{p['subj']} is developing confidence in joining group and pair work activities."
 ]
 
 social_lines = [
