@@ -62,7 +62,7 @@ button {
 """, unsafe_allow_html=True)
 
 # ---------- TITLE ----------
-st.markdown('<div class="main-title">📘 Report Card App</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-title">📘 Report Card Generator</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-title">Create positive ESL student reports in one click</div>', unsafe_allow_html=True)
 
 # ---------- INPUTS ----------
