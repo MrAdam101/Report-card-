@@ -170,11 +170,11 @@ improvement_lines = [
 ]
 
 closing_lines = [
-    f"Overall, {student_name} has had a successful term in English and should feel proud of the progress made so far. {p['subj']} has shown a positive attitude, a willingness to learn, and a steady effort throughout lessons. I am very pleased with {p['poss']} development and look forward to seeing {p['obj']} continue to grow next term.",
-    
-    f"Overall, I am very happy with {student_name}'s progress in English this term. {p['subj']} has worked hard, shown a pleasing attitude toward learning, and continued to build important skills in class. I look forward to seeing even more growth and confidence from {p['obj']} in the future.",
-    
-    f"In summary, {student_name} has made encouraging progress and has contributed positively to English class this term. {p['subj']} has shown good effort, developing confidence, and a respectful attitude toward learning. I am pleased with {p['poss']} progress and look forward to seeing continued success in the future."
+    f"I am very pleased with {student_name}'s progress this term.",
+    f"Overall, {student_name} has done very well in English this term.",
+    f"{student_name} should feel proud of the progress made in English.",
+    f"I look forward to seeing {student_name} continue to improve next term.",
+    f"{student_name} has shown great effort and should be proud of this progress."
 ]
 # ---------- GENERATE ----------
 if st.button("✨ Generate Report Card"):
