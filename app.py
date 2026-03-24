@@ -127,25 +127,21 @@ closing_lines = [
     
     f"In summary, {student_name} has made encouraging progress and has contributed positively to English class this term. {p['subj']} has shown good effort, developing confidence, and a respectful attitude toward learning. I am pleased with {p['poss']} progress and look forward to seeing continued success in the future."
 ]
-
 # ---------- GENERATE ----------
 if st.button("✨ Generate Report Card"):
     if not student_name.strip():
         st.warning("Please enter the student's name.")
     else:
-           report = " ".join([
-           random.choice(opening_lines),
-           random.choice(strength_lines),
-           random.choice(social_lines),
-           random.choice(improvement_lines),
-           random.choice(closing_lines)
-])
-
-        word_count = len(report.split())
+        report = " ".join([
+            random.choice(opening_lines),
+            random.choice(strength_lines),
+            random.choice(social_lines),
+            random.choice(improvement_lines),
+            random.choice(closing_lines)
+        ])
 
         st.subheader("Generated Report")
         st.markdown(f'<div class="report-box">{report}</div>', unsafe_allow_html=True)
-        st.write(f"Word count: {word_count}")
 
         st.download_button(
             "📥 Download Report",
