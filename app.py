@@ -176,11 +176,22 @@ improvement_lines = [
 ]
 
 closing_lines = [
-    f"I am very pleased with {student_name}'s progress this term.",
-    f"Overall, {student_name} has done very well in English this term.",
-    f"{student_name} should feel proud of the progress made in English.",
-    f"I look forward to seeing {student_name} continue to improve next term.",
-    f"{student_name} has shown great effort and should be proud of this progress."
+    f"Overall, {student_name} has made positive progress in English this term. {p['subj']} should feel proud of the effort shown during lessons.",
+    f"I am very pleased with {student_name}'s progress in English this term. {p['subj']} has shown a positive attitude toward learning.",
+    f"{student_name} has worked well in English this term and continues to improve. {p['subj']} should be proud of this progress.",
+    f"Overall, {student_name} has shown encouraging development in English. {p['subj']} continues to build confidence in class.",
+    f"I am happy with {student_name}'s effort and progress in English lessons. {p['subj']} is continuing to improve steadily.",
+    f"{student_name} has demonstrated a positive approach to learning English this term. {p['subj']} is making steady progress.",
+    f"Overall, {student_name} has done well in English and continues to grow. {p['subj']} shows a positive attitude toward learning.",
+    f"I am pleased with the progress {student_name} has made in English this term. {p['subj']} continues to develop confidence.",
+    f"{student_name} has made good progress in English and shows a strong effort. {p['subj']} is continuing to improve.",
+    f"Overall, {student_name} has shown a positive attitude and steady progress in English. {p['subj']} continues to develop skills.",
+    f"{student_name} has worked hard this term and has made encouraging progress in English. {p['subj']} should feel proud.",
+    f"I am very satisfied with {student_name}'s progress in English lessons. {p['subj']} continues to show a positive approach.",
+    f"{student_name} continues to make steady progress in English and shows good effort. {p['subj']} is developing confidence.",
+    f"Overall, {student_name} has had a successful term in English. {p['subj']} continues to improve in a positive way.",
+    f"{student_name} has shown good effort and progress in English this term. {p['subj']} is continuing to grow in confidence."
+
 ]
 # ---------- GENERATE ----------
 # ---------- GENERATE ----------
