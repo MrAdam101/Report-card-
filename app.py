@@ -200,12 +200,12 @@ if st.button("✨ Generate Report Card"):
         st.warning("Please enter the student's name.")
     else:
         report = " ".join([
-           random.choice(opening_lines),
-           random.choice(strength_lines),
-           random.choice(participation_lines),
-           random.choice(social_lines),
-           random.choice(improvement_lines),
-           f"{student_name}, keep up the hard work."
+         random.choice(opening_lines),
+         random.choice(strength_lines),
+         random.choice(participation_lines),  # 👈 ADD THIS BACK
+         random.choice(social_lines),
+         random.choice(improvement_lines),
+         f"{student_name}, keep up the hard work."
         ])
 
         st.subheader("Generated Report")
