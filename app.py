@@ -138,21 +138,22 @@ participation_lines = [
 ]
 
 social_lines = [
-    f"{student_name} is polite and respectful in class and works well with classmates.",
-    f"{p['subj']} gets along well with others and shows kindness during classroom activities.",
-    f"{p['subj']} demonstrates good behaviour and is a positive member of the class.",
-    f"{student_name} interacts well with classmates and contributes to a friendly classroom environment.",
-    f"{p['subj']} is cooperative and shows respect toward both teachers and classmates.",
-    f"{p['subj']} behaves appropriately in class and helps maintain a positive learning atmosphere.",
-    f"{student_name} shows good manners and is considerate of others during lessons.",
-    f"{p['subj']} works well in pairs and groups and shows a cooperative attitude.",
-    f"{p['subj']} is kind to others and contributes to a supportive classroom environment.",
-    f"{student_name} continues to demonstrate positive classroom behaviour.",
-    f"{p['subj']} is respectful during lessons and follows classroom expectations well.",
-    f"{p['subj']} shows a calm and positive attitude when working with classmates.",
-    f"{student_name} behaves well in class and is a pleasure to teach.",
-    f"{p['subj']} is thoughtful toward others and works well in group settings.",
-    f"{p['subj']} contributes positively to the classroom and shows good social skills."
+    f"{student_name} is polite and respectful in class and works well with classmates. {p['subj']} contributes to a positive and friendly learning environment.",
+    f"{p['subj']} gets along well with others and shows kindness during classroom activities. {p['subj']} helps create a supportive classroom atmosphere.",
+    f"{p['subj']} demonstrates good behaviour and is a positive member of the class. {p['subj']} interacts well with classmates during activities.",
+    f"{student_name} interacts well with classmates and contributes to a friendly classroom environment. {p['subj']} shows respect toward others during lessons.",
+    f"{p['subj']} is cooperative and shows respect toward both teachers and classmates. {p['subj']} behaves well during classroom activities.",
+    f"{p['subj']} behaves appropriately in class and helps maintain a positive learning atmosphere. {p['subj']} works well with others during group tasks.",
+    f"{student_name} shows good manners and is considerate of others during lessons. {p['subj']} contributes to a calm and respectful classroom environment.",
+    f"{p['subj']} works well in pairs and groups and shows a cooperative attitude. {p['subj']} interacts positively with classmates during activities.",
+    f"{p['subj']} is kind to others and contributes to a supportive classroom environment. {p['subj']} shows respect during class interactions.",
+    f"{student_name} continues to demonstrate positive classroom behaviour. {p['subj']} works well with classmates and follows expectations.",
+    f"{p['subj']} is respectful during lessons and follows classroom expectations well. {p['subj']} contributes to a positive classroom environment.",
+    f"{p['subj']} shows a calm and positive attitude when working with classmates. {p['subj']} behaves appropriately during group activities.",
+    f"{student_name} behaves well in class and is a pleasure to teach. {p['subj']} interacts positively with others during lessons.",
+    f"{p['subj']} is thoughtful toward others and works well in group settings. {p['subj']} shows good behaviour during class activities.",
+    f"{p['subj']} contributes positively to the classroom and shows good social skills. {p['subj']} helps create a friendly and supportive environment."
+
 ]
 improvement_lines = [
     f"Moving forward, {student_name} can continue to build confidence when speaking in full English sentences.",
