@@ -152,11 +152,21 @@ social_lines = [
     f"{p['subj']} contributes positively to the classroom and shows good social skills."
 ]
 improvement_lines = [
-    f"Moving forward, one important area for further growth will be continuing to build confidence when speaking in full English sentences. As {student_name} becomes more comfortable using English, {p['subj'].lower()} will benefit from taking a little more time to respond verbally with complete answers. With regular practice and continued encouragement, I am confident that {p['subj'].lower()} will keep improving in this area.",
-    
-    f"To continue making progress, {student_name} would benefit from developing greater confidence when speaking English more independently. {p['subj']} already shows a good understanding of classroom language, and the next step will be to express ideas more clearly using fuller spoken responses. With more practice, {p['subj'].lower()} is likely to become an even more confident English speaker.",
-    
-    f"One area to focus on next term is speaking with greater confidence and consistency during English activities. {student_name} is capable of participating well, and with continued support, {p['subj'].lower()} can continue to strengthen {p['poss']} ability to answer using more complete English sentences. This will help {p['obj']} build even stronger communication skills."
+    f"Moving forward, {student_name} can continue to build confidence when speaking in full English sentences.",
+    f"One area for further growth is developing greater confidence when answering in English.",
+    f"To continue improving, {student_name} would benefit from speaking more often during class activities.",
+    f"The next step for {student_name} is to continue building confidence when using English independently.",
+    f"With continued practice, {student_name} can develop greater confidence in speaking during lessons.",
+    f"{student_name} would benefit from continuing to use fuller English sentences when responding in class.",
+    f"An important goal for {student_name} is to become more confident when expressing ideas in English.",
+    f"As {p['subj'].lower()} continues to progress, {student_name} can focus on speaking more clearly and confidently in class.",
+    f"With encouragement and practice, {student_name} can continue to strengthen speaking confidence in English lessons.",
+    f"To make further progress, {student_name} can focus on answering questions with greater confidence and detail.",
+    f"{student_name} is ready to take the next step by continuing to build confidence in spoken English.",
+    f"Going forward, {student_name} can continue improving by using English more independently during class.",
+    f"One helpful area to focus on is speaking with more confidence during classroom activities.",
+    f"As confidence grows, {student_name} can continue working on answering in more complete English sentences.",
+    f"With steady practice, {student_name} can continue to develop stronger confidence when speaking English."
 ]
 
 closing_lines = [
