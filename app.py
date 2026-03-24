@@ -118,6 +118,19 @@ strength_lines = [
 
 ]
 
+effort_lines = [
+    f"{p['subj']} shows a consistent effort during English lessons and always tries to do {p['poss']} best. {p['subj']} approaches classroom tasks with a positive attitude.",
+    f"{p['subj']} works hard during class activities and shows a willingness to improve. {p['subj']} continues to make a strong effort in English lessons.",
+    f"{p['subj']} demonstrates a positive attitude toward learning and puts good effort into classwork. {p['subj']} is developing a strong learning routine.",
+    f"{p['subj']} consistently shows effort during lessons and tries to complete tasks carefully. {p['subj']} is building good learning habits in English.",
+    f"{p['subj']} puts a good amount of effort into classroom activities and shows a willingness to learn. {p['subj']} continues to improve through practice.",
+    f"{p['subj']} shows strong effort in English lessons and approaches tasks with a positive mindset. {p['subj']} is developing confidence through hard work.",
+    f"{p['subj']} works diligently during lessons and shows a positive learning attitude. {p['subj']} is continuing to improve through consistent effort.",
+    f"{p['subj']} makes a good effort during English class and shows a willingness to participate. {p['subj']} is building stronger learning habits.",
+    f"{p['subj']} demonstrates effort in all classroom activities and tries to improve each lesson. {p['subj']} shows a positive attitude toward learning.",
+    f"{p['subj']} continues to show effort during lessons and approaches tasks with care. {p['subj']} is developing well through consistent practice."
+]
+
 participation_lines = [
     f"{p['subj']} participates actively during lessons and shows a willingness to try new activities. {p['subj']} is becoming more confident when taking part in class tasks.",
     f"{p['subj']} is becoming more confident when taking part in class activities. {p['subj']} shows a positive attitude toward participation during lessons.",
@@ -194,19 +207,19 @@ closing_lines = [
 
 ]
 # ---------- GENERATE ----------
-# ---------- GENERATE ----------
+
 if st.button("✨ Generate Report Card"):
     if not student_name.strip():
         st.warning("Please enter the student's name.")
     else:
-        report = " ".join([
-         random.choice(opening_lines),
-         random.choice(strength_lines),
-         random.choice(participation_lines),  # 👈 ADD THIS BACK
-         random.choice(social_lines),
-         random.choice(improvement_lines),
-         f"{student_name}, keep up the hard work."
-        ])
+        random.choice(opening_lines),
+        random.choice(strength_lines),
+        random.choice(effort_lines),  
+        random.choice(participation_lines),
+        random.choice(social_lines),
+        random.choice(improvement_lines),
+        f"{student_name}, keep up the hard work."
+ ])
 
         st.subheader("Generated Report")
         st.markdown(f'<div class="report-box">{report}</div>', unsafe_allow_html=True)
