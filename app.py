@@ -29,7 +29,7 @@ if not st.session_state.authenticated:
 
 
 # your app continues here
-st.title("Report Card Generator")
+
 
 # ---------- STYLE ----------
 st.markdown("""
