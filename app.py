@@ -99,10 +99,6 @@ mode = st.selectbox(
 
 
 # ---------- PRONOUNS ----------
-if gender == "Boy":
-    p = {"subj": "He", "obj": "him", "poss": "his"}
-else:
-    p = {"subj": "She", "obj": "her", "poss": "her"}
 
 mode = st.selectbox(
     "Select Mode",
