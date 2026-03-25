@@ -97,14 +97,6 @@ mode = st.selectbox(
     ["Select One", "Single Report", "Bulk Report"]
 )
 
-
-# ---------- PRONOUNS ----------
-
-mode = st.selectbox(
-    "Select Mode",
-    ["Select One", "Single Report", "Bulk Report"]
-)
-
 # ---------- SENTENCE BANKS ----------
 opening_lines = [
     f"{student_name} has had a very positive term in English and has shown a cheerful attitude toward learning. {p['subj']} comes to class ready to participate and responds well to teacher guidance.",
