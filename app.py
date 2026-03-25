@@ -245,8 +245,6 @@ def generate_report(name, pronouns):
     )
 
     return report
-    
-)
 
 # ---------- SINGLE REPORT ----------
 if mode == "Single Report":
