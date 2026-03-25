@@ -97,9 +97,6 @@ class_name = st.text_input("Class")
 age = st.number_input("Age", min_value=5, max_value=13, value=7)
 gender = st.radio("Select Gender", ["Boy", "Girl"])
 
-mode = st.selectbox(
-    "Select Mode",
-    ["Single Report", "Bulk Report"]
 )
 
 # ---------- PRONOUNS ----------
