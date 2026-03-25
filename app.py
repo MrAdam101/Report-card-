@@ -232,6 +232,51 @@ closing_lines = [
 ]
 # ---------- GENERATE ----------
 if st.button("✨ Generate Report Card"):
+st.markdown("---")
+st.subheader("📚 Bulk Report Generator")
+
+bulk_names = st.text_area(
+    "Enter one student name per line",
+    height=180,
+    placeholder="Yuha\nBonnie\nChloe\nHyun"
+)
+
+bulk_gender = st.radio(
+    "Select Gender For Bulk Reports",
+    ["Boy", "Girl"],
+    key="bulk_gender"
+)
+
+if bulk_gender == "Boy":
+    bulk_p = {"subj": "He", "obj": "him", "poss": "his"}
+else:
+    bulk_p = {"subj": "She", "obj": "her", "poss": "her"}
+
+if st.button("✨ Generate Bulk Reports"):
+    names_list = [name.strip() for name in bulk_names.splitlines() if name.strip()]
+
+    if not names_list:
+        st.warning("Please enter at least one student name.")
+    else:
+        all_reports_text = ""
+
+        for name in names_list:
+            report = generate_report(name, bulk_p)
+            word_count = len(report.split())
+
+            st.markdown(f"### {name}")
+            st.markdown(f'<div class="report-box">{report}</div>', unsafe_allow_html=True)
+            st.write(f"Word count: {word_count}")
+
+            all_reports_text += f"{name}\n{report}\nWord count: {word_count}\n\n{'-'*50}\n\n"
+
+        st.download_button(
+            "📥 Download All Bulk Reports",
+            all_reports_text,
+            file_name="bulk_reports.txt",
+            mime="text/plain"
+        )
+    
     if not student_name.strip():
         st.warning("Please enter the student's name.")
     else:
