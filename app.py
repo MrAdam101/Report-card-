@@ -227,7 +227,6 @@ closing_lines = [
 
 def generate_report(name, pronouns):
     student_name = name
-    p = pronouns
 
     report = " ".join([
         random.choice(opening_lines),
@@ -236,8 +235,15 @@ def generate_report(name, pronouns):
         random.choice(participation_lines),
         random.choice(social_lines),
         random.choice(improvement_lines),
-        f"{student_name}, keep up the hard work."
+        "{student_name}, keep up the hard work."
     ])
+
+    report = report.format(
+        student_name=student_name,
+        subj=pronouns["subj"],
+        obj=pronouns["obj"],
+        poss=pronouns["poss"]
+    )
 
     return report
     
