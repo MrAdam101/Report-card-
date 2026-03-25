@@ -236,7 +236,7 @@ def generate_report(name, pronouns):
     random.choice(closing_lines),  # 👈 NEW
     "{student_name}, keep up the hard work."])
 
-   report = report.format(
+    report = report.format(
     student_name=student_name,
     subj=pronouns["subj"],
     obj=pronouns["obj"],
