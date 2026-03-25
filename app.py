@@ -5,9 +5,11 @@ st.set_page_config(
     page_title="Report Card Generator",
     page_icon="📘",
     layout="centered"
-    if "report_history" not in st.session_state:
-    st.session_state.report_history = []
 )
+
+if "report_history" not in st.session_state:
+    st.session_state.report_history = []
+
 
 APP_PASSWORD = "Teachers1234"
 
