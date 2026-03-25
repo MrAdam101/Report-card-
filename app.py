@@ -1,20 +1,6 @@
 import streamlit as st
 import random
 
-# ---------- PASSWORD PROTECTION ----------
-APP_PASSWORD = "Teachers@1234"  # 👈 change this to your password
-
-password = st.text_input("Enter Password to Access App", type="password")
-
-if password != APP_PASSWORD:
-    st.warning("Please enter the correct password.")
-    st.stop()
-
-st.set_page_config(
-    page_title="Report Card Generator",
-    page_icon="📘",
-    layout="centered"
-)
 
 # ---------- STYLE ----------
 st.markdown("""
