@@ -235,21 +235,13 @@ if st.button("✨ Generate Report Card"):
     if not student_name.strip():
         st.warning("Please enter the student's name.")
     else:
-       def generate_report(name, p):
-    student_name = name  # 👈 important line
+        report = generate_report(student_name, p)
 
-    report = " ".join([
-        random.choice(opening_lines),
-        random.choice(strength_lines),
-        random.choice(effort_lines),
-        random.choice(participation_lines),
-        random.choice(social_lines),
-        random.choice(improvement_lines),
-        f"{student_name}, keep up the hard work."
-    ])
-    return report
         st.subheader("Generated Report")
-        st.markdown(f'<div class="report-box">{report}</div>', unsafe_allow_html=True)
+        st.markdown(
+            f'<div class="report-box">{report}</div>',
+            unsafe_allow_html=True
+        )
 
         word_count = len(report.split())
         st.write(f"Word count: {word_count}")
@@ -258,4 +250,5 @@ if st.button("✨ Generate Report Card"):
             "📥 Download Report",
             report,
             file_name=f"{student_name}_report.txt"
+        )
         )
