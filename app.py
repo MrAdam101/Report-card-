@@ -108,6 +108,11 @@ if gender == "Boy":
 else:
     p = {"subj": "She", "obj": "her", "poss": "her"}
 
+mode = st.selectbox(
+    "Select Mode",
+    ["Select One", "Single Report", "Bulk Report"]
+)
+
 # ---------- SENTENCE BANKS ----------
 opening_lines = [
     f"{student_name} has had a very positive term in English and has shown a cheerful attitude toward learning. {p['subj']} comes to class ready to participate and responds well to teacher guidance.",
@@ -253,72 +258,86 @@ def generate_report(name, pronouns):
     return report
     
 # ---------- SINGLE REPORT ----------
-if st.button("✨ Generate Report Card"):
-    if not student_name.strip():
-        st.warning("Please enter the student's name.")
-    else:
-        report = generate_report(student_name, p)
+if mode == "Single Report":
+    if st.button("✨ Generate Report Card"):
+        if not student_name.strip():
+            st.warning("Please enter the student's name.")
+        else:
+            report = generate_report(student_name, p)
 
-        st.subheader("Generated Report")
-        st.markdown(
-            f'<div class="report-box">{report}</div>',
-            unsafe_allow_html=True
-        )
+            st.subheader("Generated Report")
+            st.markdown(
+                f'<div class="report-box">{report}</div>',
+                unsafe_allow_html=True
+            )
 
-        word_count = len(report.split())
-        st.write(f"Word count: {word_count}")
-
-        st.download_button(
-            "📥 Download Report",
-            report,
-            file_name=f"{student_name}_report.txt"
-        )
-
-
-# ---------- BULK SECTION ----------
-st.markdown("---")
-st.subheader("📚 Bulk Report Generator")
-
-bulk_names = st.text_area(
-    "Enter one student name per line",
-    height=180,
-    placeholder="Yuha\nBonnie\nChloe\nHyun"
-)
-
-bulk_gender = st.radio(
-    "Select Gender For Bulk Reports",
-    ["Boy", "Girl"],
-    key="bulk_gender"
-)
-
-if bulk_gender == "Boy":
-    bulk_p = {"subj": "He", "obj": "him", "poss": "his"}
-else:
-    bulk_p = {"subj": "She", "obj": "her", "poss": "her"}
-
-
-# ---------- BULK GENERATE ----------
-if st.button("✨ Generate Bulk Reports"):
-    names_list = [name.strip() for name in bulk_names.splitlines() if name.strip()]
-
-    if not names_list:
-        st.warning("Please enter at least one student name.")
-    else:
-        all_reports_text = ""
-
-        for name in names_list:
-            report = generate_report(name, bulk_p)
             word_count = len(report.split())
-
-            st.markdown(f"### {name}")
-            st.markdown(f'<div class="report-box">{report}</div>', unsafe_allow_html=True)
             st.write(f"Word count: {word_count}")
 
-            all_reports_text += f"{name}\n{report}\nWord count: {word_count}\n\n{'-'*50}\n\n"
+            st.download_button(
+                "📥 Download Report",
+                report,
+                file_name=f"{student_name}_report.txt"
+            )
 
-        st.download_button(
-            "📥 Download All Bulk Reports",
-            all_reports_text,
-            file_name="bulk_reports.txt",
-            mime="text/plain"
-        )
+# ---------- BULK REPORT ----------
+if mode == "Bulk Report":
+    st.markdown("---")
+    st.subheader("📚 Bulk Report Generator")
+    st.write("Enter one student per line in this format: Name,g or Name,b")
+
+    bulk_names = st.text_area(
+        "Bulk Student List",
+        height=220,
+        placeholder="Yuha,g\nBonnie,g\nHyun,b\nLiam,b"
+    )
+
+    if st.button("✨ Generate Bulk Reports"):
+        lines = [line.strip() for line in bulk_names.splitlines() if line.strip()]
+
+        if not lines:
+            st.warning("Please enter at least one student.")
+        else:
+            all_reports_text = ""
+
+            for line in lines:
+                parts = [part.strip() for part in line.split(",")]
+
+                if len(parts) != 2:
+                    st.error(f"Wrong format: {line}")
+                    continue
+
+                name, gender_code = parts
+
+                if gender_code.lower() == "b":
+                    bulk_p = {"subj": "He", "obj": "him", "poss": "his"}
+                elif gender_code.lower() == "g":
+                    bulk_p = {"subj": "She", "obj": "her", "poss": "her"}
+                else:
+                    st.error(f"Gender must be b or g: {line}")
+                    continue
+
+                report = generate_report(name, bulk_p)
+                word_count = len(report.split())
+
+                st.markdown(f"### {name}")
+                st.markdown(
+                    f'<div class="report-box">{report}</div>',
+                    unsafe_allow_html=True
+                )
+                st.write(f"Word count: {word_count}")
+
+                all_reports_text += (
+                    f"{name}\n"
+                    f"{report}\n"
+                    f"Word count: {word_count}\n"
+                    f"{'-'*50}\n\n"
+                )
+
+            if all_reports_text:
+                st.download_button(
+                    "📥 Download All Bulk Reports",
+                    all_reports_text,
+                    file_name="bulk_reports.txt",
+                    mime="text/plain"
+                )
