@@ -285,7 +285,7 @@ if mode == "Single Report":
 # ---------- BULK REPORT ----------
 elif mode == "Bulk Report":
     st.subheader("📚 Bulk Report Generator")
-    st.write("Enter one student per line in this format: Name,g or Name,b")
+    st.write("Enter one student per line in this format: Name,g or Name,b make sure to add g for girl or b for boy ")
 
     bulk_names = st.text_area(
         "Bulk Student List",
