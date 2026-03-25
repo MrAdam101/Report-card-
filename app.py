@@ -230,8 +230,30 @@ closing_lines = [
     f"{student_name} has shown good effort and progress in English this term. {p['subj']} is continuing to grow in confidence."
 
 ]
-# ---------- GENERATE ----------
+# ---------- SINGLE REPORT ----------
 if st.button("✨ Generate Report Card"):
+    if not student_name.strip():
+        st.warning("Please enter the student's name.")
+    else:
+        report = generate_report(student_name, p)
+
+        st.subheader("Generated Report")
+        st.markdown(
+            f'<div class="report-box">{report}</div>',
+            unsafe_allow_html=True
+        )
+
+        word_count = len(report.split())
+        st.write(f"Word count: {word_count}")
+
+        st.download_button(
+            "📥 Download Report",
+            report,
+            file_name=f"{student_name}_report.txt"
+        )
+
+
+# ---------- BULK SECTION ----------
 st.markdown("---")
 st.subheader("📚 Bulk Report Generator")
 
@@ -252,6 +274,8 @@ if bulk_gender == "Boy":
 else:
     bulk_p = {"subj": "She", "obj": "her", "poss": "her"}
 
+
+# ---------- BULK GENERATE ----------
 if st.button("✨ Generate Bulk Reports"):
     names_list = [name.strip() for name in bulk_names.splitlines() if name.strip()]
 
@@ -276,24 +300,3 @@ if st.button("✨ Generate Bulk Reports"):
             file_name="bulk_reports.txt",
             mime="text/plain"
         )
-    
-    if not student_name.strip():
-        st.warning("Please enter the student's name.")
-    else:
-        report = generate_report(student_name, p)
-
-        st.subheader("Generated Report")
-        st.markdown(
-            f'<div class="report-box">{report}</div>',
-            unsafe_allow_html=True
-        )
-
-        word_count = len(report.split())
-        st.write(f"Word count: {word_count}")
-
-        st.download_button(
-            "📥 Download Report",
-            report,
-            file_name=f"{student_name}_report.txt"
-        )
-        
