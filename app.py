@@ -237,11 +237,12 @@ def generate_report(name, pronouns):
     "{student_name}, keep up the hard work."])
 
     report = report.format(
-        student_name=student_name,
-        subj=pronouns["subj"],
-        obj=pronouns["obj"],
-        poss=pronouns["poss"]
-        subj_l=pronouns["subj"].lower()
+    student_name=student_name,
+    subj=pronouns["subj"],
+    obj=pronouns["obj"],
+    poss=pronouns["poss"]
+    subj_l=pronouns["subj"].lower()
+
     )
 
     return report
