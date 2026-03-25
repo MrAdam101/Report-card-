@@ -97,6 +97,11 @@ class_name = st.text_input("Class")
 age = st.number_input("Age", min_value=5, max_value=13, value=7)
 gender = st.radio("Select Gender", ["Boy", "Girl"])
 
+mode = st.selectbox(
+    "Select Mode",
+    ["Single Report", "Bulk Report"]
+)
+
 # ---------- PRONOUNS ----------
 if gender == "Boy":
     p = {"subj": "He", "obj": "him", "poss": "his"}
@@ -230,6 +235,23 @@ closing_lines = [
     f"{student_name} has shown good effort and progress in English this term. {p['subj']} is continuing to grow in confidence."
 
 ]
+
+def generate_report(name, pronouns):
+    student_name = name
+    p = pronouns
+
+    report = " ".join([
+        random.choice(opening_lines),
+        random.choice(strength_lines),
+        random.choice(effort_lines),
+        random.choice(participation_lines),
+        random.choice(social_lines),
+        random.choice(improvement_lines),
+        f"{student_name}, keep up the hard work."
+    ])
+
+    return report
+    
 # ---------- SINGLE REPORT ----------
 if st.button("✨ Generate Report Card"):
     if not student_name.strip():
