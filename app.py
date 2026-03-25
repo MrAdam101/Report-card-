@@ -251,4 +251,4 @@ if st.button("✨ Generate Report Card"):
             report,
             file_name=f"{student_name}_report.txt"
         )
-        )
+        
