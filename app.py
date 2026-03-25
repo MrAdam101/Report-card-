@@ -5,6 +5,8 @@ st.set_page_config(
     page_title="Report Card Generator",
     page_icon="📘",
     layout="centered"
+    if "report_history" not in st.session_state:
+    st.session_state.report_history = []
 )
 
 APP_PASSWORD = "Teachers1234"
@@ -266,6 +268,13 @@ if mode == "Single Report":
             st.warning("Please enter the student's name.")
         else:
             report = generate_report(student_name, p)
+            st.session_state.report_history.insert(0, {
+              "name": student_name,
+              "class": class_name,
+              "age": age,
+              "gender": gender,
+              "report": report
+})
 
             st.subheader("Generated Report")
             st.markdown(
