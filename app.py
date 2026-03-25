@@ -241,6 +241,7 @@ def generate_report(name, pronouns):
         subj=pronouns["subj"],
         obj=pronouns["obj"],
         poss=pronouns["poss"]
+        subj_l=pronouns["subj"].lower()
     )
 
     return report
