@@ -26,6 +26,8 @@ if not st.session_state.authenticated:
 
     st.stop()
 
+
+
 # your app continues here
 st.title("Report Card Generator")
 
@@ -229,22 +231,23 @@ closing_lines = [
 
 ]
 # ---------- GENERATE ----------
-
-# ---------- GENERATE ----------
 if st.button("✨ Generate Report Card"):
     if not student_name.strip():
         st.warning("Please enter the student's name.")
     else:
-        report = " ".join([
-            random.choice(opening_lines),
-            random.choice(strength_lines),
-            random.choice(effort_lines),
-            random.choice(participation_lines),
-            random.choice(social_lines),
-            random.choice(improvement_lines),
-            f"{student_name}, keep up the hard work."
-        ])
+       def generate_report(name, p):
+    student_name = name  # 👈 important line
 
+    report = " ".join([
+        random.choice(opening_lines),
+        random.choice(strength_lines),
+        random.choice(effort_lines),
+        random.choice(participation_lines),
+        random.choice(social_lines),
+        random.choice(improvement_lines),
+        f"{student_name}, keep up the hard work."
+    ])
+    return report
         st.subheader("Generated Report")
         st.markdown(f'<div class="report-box">{report}</div>', unsafe_allow_html=True)
 
