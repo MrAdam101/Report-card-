@@ -246,9 +246,6 @@ def generate_report(name, pronouns):
 
     return report
     
-mode = st.selectbox(
-    "Select Mode",
-    ["Select One", "Single Report", "Bulk Report"]
 )
 
 # ---------- SINGLE REPORT ----------
