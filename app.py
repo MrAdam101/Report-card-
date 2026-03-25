@@ -1,6 +1,33 @@
 import streamlit as st
 import random
 
+st.set_page_config(
+    page_title="Report Card Generator",
+    page_icon="📘",
+    layout="centered"
+)
+
+APP_PASSWORD = "Teachers1234"
+
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+if not st.session_state.authenticated:
+    st.title("🔐 Teacher Access Required")
+    entered_password = st.text_input("Enter Password", type="password")
+
+    if st.button("Login"):
+        if entered_password.strip() == APP_PASSWORD:
+            st.session_state.authenticated = True
+            st.success("Access granted.")
+            st.rerun()
+        else:
+            st.error("Wrong password.")
+
+    st.stop()
+
+# your app continues here
+st.title("Report Card Generator")
 
 # ---------- STYLE ----------
 st.markdown("""
