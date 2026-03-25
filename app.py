@@ -92,11 +92,10 @@ st.markdown('<div class="sub-title">Create positive ESL student reports in one c
 # ---------- INPUTS ----------
 st.subheader("Student infomation ")
 
-student_name = st.text_input("Student Name")
-class_name = st.text_input("Class")
-age = st.number_input("Age", min_value=5, max_value=13, value=7)
-gender = st.radio("Select Gender", ["Boy", "Girl"])
-
+mode = st.selectbox(
+    "Select Mode",
+    ["Select One", "Single Report", "Bulk Report"]
+)
 
 
 # ---------- PRONOUNS ----------
@@ -254,8 +253,25 @@ def generate_report(name, pronouns):
 
     return report
     
+mode = st.selectbox(
+    "Select Mode",
+    ["Select One", "Single Report", "Bulk Report"]
+)
+
 # ---------- SINGLE REPORT ----------
 if mode == "Single Report":
+    st.subheader("Student information")
+
+    student_name = st.text_input("Student Name")
+    class_name = st.text_input("Class")
+    age = st.number_input("Age", min_value=5, max_value=13, value=7)
+    gender = st.radio("Select Gender", ["Boy", "Girl"])
+
+    if gender == "Boy":
+        p = {"subj": "He", "obj": "him", "poss": "his"}
+    else:
+        p = {"subj": "She", "obj": "her", "poss": "her"}
+
     if st.button("✨ Generate Report Card"):
         if not student_name.strip():
             st.warning("Please enter the student's name.")
@@ -278,8 +294,7 @@ if mode == "Single Report":
             )
 
 # ---------- BULK REPORT ----------
-if mode == "Bulk Report":
-    st.markdown("---")
+elif mode == "Bulk Report":
     st.subheader("📚 Bulk Report Generator")
     st.write("Enter one student per line in this format: Name,g or Name,b")
 
